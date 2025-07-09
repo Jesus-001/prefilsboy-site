@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>nsemi_boy_prefils</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      font-family: 'Segoe UI', sans-serif;
+      background: #111;
+      color: #fff;
+      scroll-behavior: smooth;
+    }
+    header, #accueil, #apropos, #beats, #design, #videos, #contact, footer {
+      display: none;
+    }
+    body.show-content header,
+    body.show-content #accueil,
+    body.show-content #apropos,
+    body.show-content #beats,
+    body.show-content #design,
+    body.show-content #videos,
+    body.show-content #contact,
+    body.show-content footer {
+      display: block;
+    }
+    #hero {
+      position: relative;
+      width: 100vw;
+      height: 100vh;
+      background: linear-gradient(135deg, #00000066, #00000088), url('images/hero-bg.jpg') no-repeat center center/cover;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      animation: fadeIn 2s ease forwards;
+    }
+    #logo {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      font-size: 1.2rem;
+      font-weight: bold;
+      background: rgba(0,0,0,0.6);
+      padding: 8px 15px;
+      border-radius: 10px;
+      color: #f39c12;
+    }
+    #hero h1 {
+      font-size: 4rem;
+      margin: 0;
+      text-shadow: 2px 2px 5px #000;
+      color: white;
+    }
+    #hero p {
+      font-size: 1.5rem;
+      color: #eee;
+      margin-top: 10px;
+    }
+    #hero a.cta {
+      margin-top: 30px;
+      padding: 14px 36px;
+      background: #fff;
+      color: #d35400;
+      font-weight: bold;
+      text-decoration: none;
+      border-radius: 30px;
+      box-shadow: 0 4px 8px rgba(211, 84, 0, 0.4);
+      transition: background 0.3s ease;
+    }
+    #hero a.cta:hover {
+      background: #f39c12;
+      color: #fff;
+    }
+    #scroll-down {
+      position: absolute;
+      bottom: 20px;
+      font-size: 2rem;
+      animation: bounce 2s infinite;
+      color: #f39c12;
+      cursor: pointer;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+  </style>
+</head>
+<body>
+  <section id="hero">
+    <div id="logo">PrefilsBoy</div>
+    <h1>nsemi_boy_prefils</h1>
+    <p>Créateur d’univers musical et visuel</p>
+    <a class="cta" href="#beats">Écouter mes sons</a>
+    <div id="scroll-down">⬇️</div>
+  </section>
+
+  <header>
+    <img src="images/profile.jpg" alt="Photo de profil" class="profile-pic">
+    <nav>
+      <a href="#accueil">Accueil</a>
+      <a href="#apropos">À propos</a>
+      <a href="#beats">Beats</a>
+      <a href="#design">Design</a>
+      <a href="#videos">Vidéos</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section id="accueil">
+    <h2>Bienvenue</h2>
+    <p>Créateur d’univers : beats, musique, design et plus encore. Explore mon monde créatif.</p>
+  </section>
+
+  <section id="apropos">
+    <h2>À propos</h2>
+    <p>Je suis nsemi_boy_prefils — beatmaker, designer, créatif visuel et réal. Ce site est mon espace pour partager mes créations, mon énergie et ma vision.</p>
+  </section>
+
+  <section id="beats">
+    <h2>Beats & Musique</h2>
+    <p>Découvre mes sons les plus récents :</p>
+    <div class="beat-item">
+      <img src="images/beat-cover.jpg" alt="Cover Beat No Love">
+      <iframe width="100%" height="120" scrolling="no" frameborder="no" allow="autoplay"
+        src="https://audiomack.com/embed/song/prefilsnsemi0033/instru-beat-no-love-by-prefils-la-prod-prefilsboy?background=1"></iframe>
+      <br>
+      <a class="download-button" href="https://audiomack.com/prefilsnsemi0033/song/instru-beat-no-love-by-prefils-la-prod-prefilsboy" target="_blank">Télécharger ce beat</a>
+    </div>
+  </section>
+
+  <section id="design">
+    <h2>Design</h2>
+    <div class="gallery">
+      <img src="images/design1.jpg" alt="Créateur TikTok" />
+      <img src="images/beat-cover.jpg" alt="Production PrefilsBoy" />
+    </div>
+  </section>
+
+  <section id="videos">
+    <h2>Vidéos</h2>
+    <p>Découvre mes dernières vidéos sur YouTube :</p>
+    <a class="yt-button" href="https://www.youtube.com/channel/UC1saXgxTVAP4NczmOJP2u5g" target="_blank">Voir la chaîne YouTube</a>
+    <br><br>
+    <a class="yt-button" href="https://www.tiktok.com/@nsemi_boy_prefils" target="_blank">Voir mon TikTok</a>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <form action="https://formspree.io/f/xqabvlkk" method="POST">
+      <label for="name">Nom :</label><br />
+      <input type="text" id="name" name="name" required /><br />
+
+      <label for="email">Email :</label><br />
+      <input type="email" id="email" name="email" required /><br />
+
+      <label for="message">Message :</label><br />
+      <textarea id="message" name="message" rows="5" required></textarea><br />
+
+      <button type="submit">Envoyer</button>
+    </form>
+  </section>
+
+  <footer>
+    © 2025 nsemi_boy_prefils — Tous droits réservés.
+  </footer>
+
+  <script>
+    window.addEventListener("DOMContentLoaded", function () {
+      const scrollButton = document.getElementById("scroll-down");
+      if (scrollButton) {
+        scrollButton.addEventListener("click", function () {
+          document.body.classList.add("show-content");
+          setTimeout(() => {
+            document.getElementById("beats").scrollIntoView({ behavior: "smooth" });
+          }, 100);
+        });
+      }
+    });
+  </script>
+</body>
+</html>
